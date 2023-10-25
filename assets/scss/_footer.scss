@@ -1,0 +1,134 @@
+.footer {
+
+	padding-top: rem-calc(32);
+	background-color: #4f4b4b;
+	margin-top: 82px;
+	@include breakpoint(small down) {
+		text-align: center;
+	}
+}
+
+.footer__logo {
+	@include breakpoint(small down) {
+		margin-bottom: rem-calc(20);
+	}
+
+	img {
+		width: rem-calc(160);
+		height: auto;
+		object-fit: contain;
+	}
+}
+
+.footer__sp {
+	.stay-tuned {
+		justify-content: flex-end;
+
+		@include breakpoint(small down) {
+			justify-content: center;
+		}
+	}
+}
+
+.footer-menu {
+	align-items: center;
+
+	@include breakpoint(small down) {
+		justify-content: center;
+		margin-bottom: rem-calc(20);
+	}
+
+	li {
+
+		a {
+			&.button {
+				padding: $button-padding;
+				line-height: 1;
+			}
+		}
+	}
+}
+
+.footer__copy {
+	margin-top: rem-calc(32);
+	padding-top: rem-calc(10);
+	padding-bottom: rem-calc(10);
+	background-color: lightgrey;
+	font-size: rem-calc(12);
+	text-align: center;
+}
+
+.footer-text-1 {
+	font-family: 'segoeui','sans-serif';
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 21px;
+	text-align: center;
+	color: #ffffff;
+	padding: 47px 36%;
+
+}
+.footer-text-2 {
+	font-family: 'segoeui','sans-serif';
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 21px;
+	text-align: center;
+	color: #ffffff;
+	padding: 47px 0%;
+
+}
+.for-padding {
+	width: 100%;
+}
+
+.hover-for-footer-logos {
+	transition: 0.5s;
+}
+
+.hover-for-footer-logos:hover {
+	transform: scale(1.1);
+}
+.for-footer-logos-bg {
+	color: #acabab;
+	border: solid 1px #acabab;
+	padding: 6px;
+}
+.stay-tuned {
+	margin-top: -25px;
+	margin-left: 5px;
+}
+.footer-custom-logo {
+	margin-top: 25px;
+	//margin-left: 70px;
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	.stay-tuned {
+		margin-left: -12px;
+	}
+	//.footer-custom-logo {
+	//	margin-left: 0;
+	//}
+}
+
+@media screen and (max-width: 640px) {
+	.stay-tuned {
+		margin-left: -12px;
+	}
+}
+
+@media screen and (min-width: 1622px) {
+	.footer-custom-logo {
+		margin-left: 100px;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px) {
+	.footer-custom-logo {
+		margin-left: -50px;
+	}
+}

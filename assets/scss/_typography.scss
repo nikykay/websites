@@ -1,0 +1,358 @@
+/* ---------------------------------------
+	Typography
+--------------------------------------- */
+
+html {
+  // Default 0.833333334vw equal to 16px at 1920px. Calculate base font size depends on design.
+  // font-size = 16px / WIDTH OF DESIGN (not container)
+  font-size: 0.833333334vw; // Comment this line to convert adaptive site to regular pixels.
+
+  @include breakpoint(xlarge down) {
+    font-size: 0.9375vw; // Increases site size on 1201-1440px. make sure site is not braking on this resolutions
+  }
+
+  @include breakpoint(large down) {
+    font-size: 1.04vw; // Increases site size on 1025-1200px. make sure site is not braking on this resolutions
+  }
+
+  @include breakpoint(medium down) {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-size: rem-calc(16);
+
+
+  @include breakpoint(large only) {
+    font-size: rem-calc(20);
+  }
+}
+
+@font-face {
+  src: url("http://artisanikadev.wpengine.com/wp-content/uploads/2022/11/SEGOEUI.TTF");
+  font-family: segoe_ui;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  a {
+    color: inherit;
+  }
+}
+
+h1, .h1 {
+  /*basic heading styles*/
+
+}
+
+h2, .h2 {
+  /*basic heading styles*/
+
+}
+
+h3, .h3 {
+  /*basic heading styles*/
+
+}
+
+h4, .h4 {
+  /*basic heading styles*/
+
+}
+
+h5, .h5 {
+  /*basic heading styles*/
+
+}
+
+h6, .h6 {
+  /*basic heading styles*/
+
+}
+
+p {
+  /*basic paragraph styles*/
+  &:empty {
+    display: none;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  /*basic list styles*/
+  font-size: inherit;
+
+  li {
+    /*basic list-item styles*/
+  }
+}
+
+ul, ol {
+  list-style-position: inside;
+}
+
+blockquote {
+
+}
+
+address {
+  margin-bottom: $global-margin;
+  font-style: normal;
+}
+
+a {
+  color: $main-color;
+  transition: all 0.2s ease-in-out;
+
+  &:hover, &:focus {
+    /*basic hover and focus effects*/
+    color: darken($main-color, 20);
+  }
+}
+
+a, button, .button, input[type='submit'], input[type='reset'], input[type='button'] {
+  // Change opacity to 0.5 and color by client request.
+  -webkit-tap-highlight-color: rgba(invert($main-color), 0.5) !important;
+}
+
+/* ---------------------------------------
+	Forms/Inputs
+--------------------------------------- */
+
+.no-outline {
+  button, a, [tabindex] {
+    outline: none;
+  }
+}
+
+/* Placeholder styling */
+
+input, textarea {
+  &::placeholder {
+    opacity: 1;
+  }
+}
+
+/* Input Styling */
+:root {
+  --input-height: #{($input-font-size * unitless-calc($input-line-height, $input-font-size)) + (get-side($input-padding, 'top') + get-side($input-padding, 'bottom')) + rem-calc(get-border-value($input-border, 'width') * 2)};
+}
+
+[type=color],
+[type=date],
+[type=datetime-local],
+[type=datetime],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select,
+.ui-selectmenu-button {
+  /* STYLES GO THERE */
+  height: var(--input-height);
+  margin-bottom: 0;
+}
+
+select:not([multiple]),
+.ui-selectmenu-button:not([multiple]) {
+  padding: $input-padding;
+  padding-right: rem-calc(32);
+}
+
+// Select styles
+.ui-selectmenu-button {
+  position: relative;
+  display: block;
+  min-width: 100%;
+  background: $input-background;
+  cursor: pointer;
+
+  .ui-icon {
+    position: absolute;
+    right: rem-calc(10);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+
+    &::before {
+      content: '\f078';
+      color: $input-color;
+      font-family: $fa;
+      font-size: 75%;
+      font-weight: 900;
+    }
+  }
+}
+
+.ui-selectmenu-text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.ui-selectmenu-menu {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  .ui-menu {
+    @include list-unstyled;
+    overflow: auto;
+    max-height: rem-calc(400);
+    margin-top: -#{get-border-value($input-border, 'width')};
+    border: $input-border;
+    border-radius: 0 0 $input-radius $input-radius;
+    background-color: #fff;
+
+    // Option styles
+    .ui-menu-item {
+      flex: 0 1 100%;
+      border: none;
+      background-color: #fff;
+      color: $text-color;
+      font-size: rem-calc(14);
+      line-height: unitless-calc($input-line-height, $input-font-size);
+      cursor: pointer;
+    }
+
+    .ui-menu-item-wrapper {
+      padding: rem-calc(5) get-side($input-padding, 'left');
+
+      &.ui-state-active {
+        background-color: lighten($main-color, 40);
+      }
+    }
+  }
+}
+
+.ui-selectmenu-open {
+  display: block;
+}
+
+textarea[rows] {
+  /*Styles for TextArea*/
+  max-width: 100%;
+  height: rem-calc(160);
+}
+
+[type=number] {
+  -moz-appearance: textfield;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+[type=checkbox],
+[type=file],
+[type=radio] {
+  margin-bottom: 0;
+}
+
+/*
+// Custom checkbox / radio input style
+$checkbox-size: rem-calc(16);
+[type=checkbox], [type=radio] {
+	@extend %css-clip;
+
+	+ label, +span {
+		position: relative;
+		margin-right: 0;
+		margin-left: 0;
+		padding-left: #{$checkbox-size + rem-calc(8)};
+		line-height: $checkbox-size;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: $checkbox-size;
+			height: $checkbox-size;
+			margin-top: -#{$checkbox-size /  2};
+			border: 1px solid #777;
+			background-color: #fff;
+		}
+	}
+
+	&:checked + label, &:checked + span {
+
+		&::before {
+			border-color: $main-color;
+		}
+		&:after {
+			content: '\f00c';
+			position: absolute;
+			top: 50%;
+			left: $checkbox-size / 6;
+			color: $main-color;
+			font-family: $fa;
+			font-size: $checkbox-size * 2 / 3;
+			font-weight: 900;
+			line-height: 1;
+			transform: translateY(-50%);
+		}
+	}
+
+	&:focus + label, &:focus + span {
+		outline: none;
+	}
+}
+
+[type=radio] {
+	+ label, + span {
+		&::before {
+			border-radius: 50%;
+		}
+	}
+
+	&:checked + label, &:checked + span {
+		&:after {
+			content: '';
+			left: $checkbox-size / 4;
+			width: $checkbox-size / 2;
+			height: $checkbox-size / 2;
+			border-radius: 50%;
+			background-color: $main-color;
+		}
+	}
+}
+*/
+
+button, .button, input[type='submit'], input[type='reset'], input[type='button'] {
+  border-width: $button-hollow-border-width;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover, &:focus {
+
+  }
+}
+
+/* Button additional styles */
+
+.button {
+  &:hover, &:focus {
+    /*basic hover and focus effects*/
+  }
+}

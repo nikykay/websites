@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a26e6232-f32b-4ef3-8885-5a2ca19c0d24" name="artisan">
+        <fileTransfer rootFolder="/wp-content/themes/artisan" accessType="SFTP" host="artisanikadev.sftp.wpengine.com" port="2222" sshConfigId="8e0a0306-90eb-4271-ac46-ff29f67cdf3d" sshConfig="artisanikadev-nikadev@artisanikadev.sftp.wpengine.com:2222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

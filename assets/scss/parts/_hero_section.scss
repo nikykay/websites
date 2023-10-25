@@ -1,0 +1,21 @@
+.hero-sub-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stretched-img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+}
+
+.tm-text {
+  width: 100%;
+  max-width: 1015px;
+  max-height: 280px;
+  position: absolute;
+  z-index: 2;
+
+}

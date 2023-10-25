@@ -1,0 +1,190 @@
+.bg {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+.slide-class {
+  height: 250px;
+  margin-top: 30px;
+
+}
+.slick-track {
+  height: 100%;
+  max-height: 550px;
+}
+.for-margin {
+  margin-top: 150px;
+}
+.home-btn {
+  width: 207px;
+  height: 73px;
+  border: 1px solid #9f8055;
+  background-color: $my-color;
+  margin: 205px auto;
+
+}
+.rame {
+  color: #ffffff;
+  font-family: 'segoeui','sans-serif';
+  font-size: 23px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 39px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.rame:hover {
+  color: #1da1f2;
+}
+.slide-div {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #a76101;
+}
+.slide-image {
+  width: 318px;
+}
+
+/* the slides */
+.slick-slide {
+  margin: 0 27px !important;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -27px !important;
+  max-height: 555px;
+}
+
+.home-address {
+  color: #a76101;
+  font-family: 'segoeui','sans-serif';
+  font-size: 19px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 23.31px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 21px;
+  padding: 0px 10px;
+}
+.home-builder{
+  color: #ababab;
+  font-family: 'segoeui','sans-serif';
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 23.31px;
+
+  text-align: center;
+}
+.home-number {
+  color: #ffffff;
+  font-family: 'segoeui','sans-serif';
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-number-div {
+  background-color: #a76101;
+  height: 100%;
+  max-height: 45px;
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.slide-div img {
+  width: 100%;
+}
+.wpc-filter-title {
+  display: none;
+}
+.wpc-edit-filter-set {
+  display: none;
+}
+.widget-title {
+  display: none;
+}
+.wpc-filter-header {
+  display: none;
+}
+.widget {
+  margin-top: 15px;
+  width: 268px;
+
+}
+.for-font {
+
+}
+//@media screen and (min-width: 1622px) {
+//  .home-btn {
+//    width: 207px;
+//    height: 73px;
+//    border: 1px solid #9f8055;
+//    background-color: $my-color;
+//
+//  }
+//}
+
+
+@media (min-width: 1621px) and (max-width: 2600px) {
+  .home-btn {
+    margin: 220px auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1620px) {
+  .home-btn {
+    margin: 180px auto;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 797px) {
+  .home-address {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .home-builder {
+    font-size: 13px
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1069px) {
+  .for-font {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .for-font {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  .for-font{
+
+    font-size: 15px;
+  }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+  .for-font{
+
+    font-size: 15px;
+  }
+}
+@media (min-width: 420px) and (max-width: 600px) {
+  .for-font{
+
+    font-size: 15px;
+  }
+}

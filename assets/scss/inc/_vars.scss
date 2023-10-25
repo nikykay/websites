@@ -1,0 +1,35 @@
+// Project variables
+$blue: #2d22b4;
+$my-color: #a76101;
+$text-color: #333;
+
+$main-color: $my-color;
+$sub-color: $main-color;
+
+$font: 'Open Sans', sans-serif;
+$sub-font: $font;
+$fa: 'Font Awesome 6 Free';
+$fab: 'Font Awesome 6 Brands';
+
+// Font Awesome Vars
+$fa-font-path: "../fonts";
+$fa-font-display: swap;
+
+$font-path: "../../assets/fonts";
+// Project mixins
+
+
+// Custom fonts
+
+
+@font-face {
+  font-family: 'segoeui';
+  src: local('segoe_ui'), local('segoe_ui'),
+  url('#{$font-path}/Segoe/Segoeui.woff2') format('woff2'),
+  url('#{$font-path}/Segoe/Segoeui.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Use https://transfonter.org/ service with "Fix vertical metrics" setting
+// to get correct converted web fonts. Use woff2 format. NOT ttf or otf!
